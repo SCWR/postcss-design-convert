@@ -18,11 +18,11 @@
 
 ```css
 .design-a {
-    /* Input example */
+  /* Input example */
   width: 8.21vw;
 }
 .custom .design-a {
-    /* Input example */
+  /* Input example */
   width: 8.21vw;
 }
 ```
@@ -33,7 +33,7 @@
   width: 16.42vw;
 }
 .custom .design-a {
-    /* Input example */
+  /* Output example */
   width: 8.21vw;
 }
 ```
@@ -48,11 +48,11 @@
 
 ```css
 .design-a {
-    /* Input example */
+  /* Input example */
   width: 8.21vw;
 }
 .custom .design-a {
-    /* Input example */
+  /* Input example */
   width: 8.21vw;
 }
 ```
@@ -63,7 +63,7 @@
   width: 16.42vw;
 }
 .custom .design-a {
-    /* Input example */
+  /* Output example */
   width: 16.42vw;
 }
 ```
@@ -78,12 +78,12 @@
 
 ```css
 .design-a {
-    /* Input example */
+  /* Input example */
   width: 8.21vw;
   height: 8.21rem;
 }
 .custom .design-a {
-    /* Input example */
+  /* Input example */
   width: 8.21vw;
   height: 8.21rem;
 }
@@ -96,7 +96,7 @@
   height: 16.42rem;
 }
 .custom .design-a {
-    /* Input example */
+  /* Output example */
   width: 16.42vw;
   height: 16.42rem;
 }
