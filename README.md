@@ -1,10 +1,11 @@
-# PostCSS Cube Convert [![Build Status][ci-img]][ci]
+# PostCSS Design Convert [![Build Status]][ci]
 
+<!-- [ci-img] -->
 [PostCSS] plugin adjust the size of design draft when using viewport or rem layout.
 (e.g. cube-ui is based on 375\*667, but project design draft is based on 750\*1334)
 
 [PostCSS]: https://github.com/postcss/postcss
-[ci-img]:  https://travis-ci.org/SCWR/postcss-design-convert.svg
+<!-- [ci-img]:  https://travis-ci.org/SCWR/postcss-design-convert.svg -->
 [ci]:      https://travis-ci.org/SCWR/postcss-design-convert
 
 ```js
