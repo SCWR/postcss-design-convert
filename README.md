@@ -176,7 +176,7 @@ module.exports = {
 ### Options
 
 1. >__multiple__ _(number)_ __default 2__: how many times the design draft needs to be multiplied
-2. >__units__ _(arrty&lt;string&gt;)_ __default \['vw'\]__: the units to be converted
+2. >__units__ _(array&lt;string&gt;)_ __default \['vw'\]__: the units to be converted
 3. >__selector__ _(string | Reg)_ __default /./__: used to filter out the style to be converted (version compatibility reasons, alias __\[classRule\]__)
 4. >__attribute__ _(string | Reg)_: used to filter out the attributes to be converted
 
