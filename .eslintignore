@@ -1,0 +1,6 @@
+#/build/
+/static/
+/public/
+/config/
+/lib/
+/node_modules/

@@ -1,18 +1,18 @@
-var postcss = require('postcss')
+let postcss = require('postcss')
 
-var plugin = require('../')
+let plugin = require('../')
 
-function run(input, output, opts) {
+function run (input, output, opts) {
   return postcss([plugin(opts)]).process(input, {
     from: undefined
-  }).then(function (result) {
+  }).then(result => {
     expect(replace(result.css)).toEqual(replace(output))
     expect(result.warnings()).toHaveLength(0)
     expect(result.css).toMatchSnapshot()
   })
 }
 
-function replace(str) {
+function replace (str) {
   return str.replace(/([\r\n]|\s)+/g, ' ')
 }
 
@@ -23,7 +23,7 @@ it('does something', function () {
 */
 
 const example = [{
-    input: `.design-a{
+  input: `.design-a{
     width: 100vw;
     height: 10.3vw;
   }
@@ -37,7 +37,7 @@ const example = [{
   a{
     width:100vw;
   }`,
-    output: `.design-a{
+  output: `.design-a{
     width: 200vw;
     height: 20.6vw;
   }
@@ -51,14 +51,13 @@ const example = [{
   a{
     width:100vw;
   }`,
-    opts: {
-      multiple: 2,
-      units: ['vw'],
-      selector: /\.design-/
-    }
-  },
-  {
-    input: `.design-a{
+  opts: {
+    multiple: 2,
+    units: ['vw'],
+    selector: /\.design-/
+  }
+}, {
+  input: `.design-a{
     width: 100vw;
     height: 10.3vw;
   }
@@ -72,7 +71,7 @@ const example = [{
   a{
     width:100vw;
   }`,
-    output: `.design-a{
+  output: `.design-a{
     width: 200vw;
     height: 10.3vw;
   }
@@ -86,15 +85,14 @@ const example = [{
   a{
     width:100vw;
   }`,
-    opts: {
-      multiple: 2,
-      units: ['vw'],
-      selector: /\.design-/,
-      attribute: /width/,
-    }
-  },
-  {
-    input: `.design-a{
+  opts: {
+    multiple: 2,
+    units: ['vw'],
+    selector: /\.design-/,
+    attribute: /width/
+  }
+}, {
+  input: `.design-a{
     width: 100vw;
     height: 10.3vw;
   }
@@ -108,7 +106,7 @@ const example = [{
   a{
     width:100vw;
   }`,
-    output: `.design-a{
+  output: `.design-a{
     width: 200vw;
     height: 20.6vw;
   }
@@ -122,14 +120,13 @@ const example = [{
   a{
     width:100vw;
   }`,
-    opts: {
-      multiple: 2,
-      units: ['vw'],
-      classRule: /\.design-/ //test alias, version compatible
-    }
-  },
-  {
-    input: `.design-a{
+  opts: {
+    multiple: 2,
+    units: ['vw'],
+    classRule: /\.design-/ // test alias, version compatible
+  }
+}, {
+  input: `.design-a{
     width: 100vw;
     height: 10.3vw;
   }
@@ -143,7 +140,7 @@ const example = [{
   a{
     width:100vw;
   }`,
-    output: `.design-a{
+  output: `.design-a{
     width: 200vw;
     height: 20.6vw;
   }
@@ -157,13 +154,13 @@ const example = [{
   a{
     width:100vw;
   }`,
-    opts: {
-      multiple: 2,
-      units: ['vw'],
-      selector: /^\.design-/
-    }
-  }, {
-    input: `.design-a{
+  opts: {
+    multiple: 2,
+    units: ['vw'],
+    selector: /^\.design-/
+  }
+}, {
+  input: `.design-a{
     width: 100rem;
     height: 10.3rem;
     width: 100vw;
@@ -179,7 +176,7 @@ const example = [{
   a{
     width:100vw;
   }`,
-    output: `.design-a{
+  output: `.design-a{
     width: 200rem;
     height: 20.6rem;
     width: 200vw;
@@ -195,14 +192,13 @@ const example = [{
   a{
     width:100vw;
   }`,
-    opts: {
-      multiple: 2,
-      units: ['vw', 'rem'],
-      selector: /^\.design-/
-    }
-  },
-  {
-    input: `.design-a{
+  opts: {
+    multiple: 2,
+    units: ['vw', 'rem'],
+    selector: /^\.design-/
+  }
+}, {
+  input: `.design-a{
     width: 100rem;
     height: 10.3rem;
     width: 100vw;
@@ -218,7 +214,7 @@ const example = [{
   a{
     width:100vw;
   }`,
-    output: `.design-a{
+  output: `.design-a{
     width: 200rem;
     height: 20.6rem;
     width: 200vw;
@@ -234,13 +230,12 @@ const example = [{
   a{
     width:200vw;
   }`,
-    opts: {
-      multiple: 2,
-      units: ['vw', 'rem']
-    }
-  },
-  {
-    input: `.design-a{
+  opts: {
+    multiple: 2,
+    units: ['vw', 'rem']
+  }
+}, {
+  input: `.design-a{
     width: 100rem;
     height: 10.3rem;
     width: 100vw;
@@ -256,7 +251,7 @@ const example = [{
   a{
     width:100vw;
   }`,
-    output: `.design-a{
+  output: `.design-a{
     width: 100rem;
     height: 10.3rem;
     width: 100vw;
@@ -272,20 +267,15 @@ const example = [{
   a{
     width:200vw;
   }`,
-    opts: {
-      multiple: 2,
-      units: ['vw', 'rem'],
-      selector: 'a'
-    }
+  opts: {
+    multiple: 2,
+    units: ['vw', 'rem'],
+    selector: 'a'
   }
-]
+}]
 
-example.forEach(({
-  input,
-  output,
-  opts
-}) => {
-  it(input, function () {
+example.forEach(({ input, output, opts }) => {
+  it(input, () => {
     return run(input, output, opts)
   })
 })
