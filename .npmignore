@@ -1,6 +1,8 @@
 .npmignore
 .gitignore
 .editorconfig
+.eslintrc.js
+.eslintignore
 
 node_modules/
 npm-debug.log
