@@ -1,11 +1,24 @@
-# PostCSS Design Convert [![Build Status][ci-img]][ci]
+# PostCSS Design Convert
+
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
+[![Build Status][travis-ci-image]][travis-ci-url]
+<!-- [![Node.js Version][node-version-image]][node-version-url] -->
+
+babel plugin quickly introduce the echarts module on demand
 
 [PostCSS] plugin adjust the size of design draft when using viewport or rem layout.
 (e.g. cube-ui is based on 375\*667, but project design draft is based on 750\*1334)
 
+[npm-image]: https://img.shields.io/npm/v/postcss-design-convert.svg
+[npm-url]: https://npmjs.org/package/postcss-design-convert
+<!-- [node-version-image]: https://img.shields.io/node/v/postcss-design-convert.svg
+[node-version-url]: http://nodejs.org/download/ -->
+[downloads-image]: https://img.shields.io/npm/dm/postcss-design-convert.svg
+[downloads-url]: https://npmjs.org/package/postcss-design-convert
+[travis-ci-image]: https://travis-ci.org/SCWR/postcss-design-convert.svg
+[travis-ci-url]: https://travis-ci.org/SCWR/postcss-design-convert
 [PostCSS]: https://github.com/postcss/postcss
-[ci-img]:  https://travis-ci.org/SCWR/postcss-design-convert.svg
-[ci]:      https://travis-ci.org/SCWR/postcss-design-convert
 
 ```js
 'postcss-design-convert' : {
