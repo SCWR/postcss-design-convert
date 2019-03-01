@@ -5,8 +5,6 @@
 [![Build Status][travis-ci-image]][travis-ci-url]
 <!-- [![Node.js Version][node-version-image]][node-version-url] -->
 
-babel plugin quickly introduce the echarts module on demand
-
 [PostCSS] plugin adjust the size of design draft when using viewport or rem layout.
 (e.g. cube-ui is based on 375\*667, but project design draft is based on 750\*1334)
 
