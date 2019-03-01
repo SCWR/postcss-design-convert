@@ -1,6 +1,6 @@
 {
   "name": "postcss-design-convert",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "PostCSS plugin adjust the size of design draft when using viewport or rem layout (e.g. cube-ui is based on 375*667, but project design draft is based on 750*1334)",
   "keywords": [
     "postcss",
@@ -10,7 +10,7 @@
     "cube-ui"
   ],
   "scripts": {
-    "test": "jest"
+    "test": "jest -u"
   },
   "author": "SCWR <dl_run@qq.com>",
   "license": "MIT",

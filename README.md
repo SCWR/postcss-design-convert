@@ -18,104 +18,166 @@
 [travis-ci-url]: https://travis-ci.org/SCWR/postcss-design-convert
 [PostCSS]: https://github.com/postcss/postcss
 
-```js
-'postcss-design-convert' : {
-  multiple: 2,
-  units: ['vw'],
-  classRule: /^\.design-/
-}
-```
-
-```css
-.design-a {
-  /* Input example */
-  width: 8.21vw;
-}
-.custom .design-a {
-  /* Input example */
-  width: 8.21vw;
-}
-```
-
-```css
-.design-a {
-  /* Output example */
-  width: 16.42vw;
-}
-.custom .design-a {
-  /* Output example */
-  width: 8.21vw;
-}
-```
+## Example
 
 ```js
 'postcss-design-convert' : {
   multiple: 2,
   units: ['vw'],
-  classRule: /\.design-/
+  selector: /^\.design-/
 }
 ```
 
 ```css
-.design-a {
   /* Input example */
+.design-a {
   width: 8.21vw;
 }
 .custom .design-a {
-  /* Input example */
   width: 8.21vw;
 }
 ```
 
 ```css
-.design-a {
   /* Output example */
+.design-a {
   width: 16.42vw;
 }
 .custom .design-a {
+  width: 8.21vw;
+}
+```
+
+***
+
+```js
+'postcss-design-convert' : {
+  multiple: 2,
+  units: ['vw'],
+  selector: /\.design-/
+}
+```
+
+```css
+  /* Input example */
+.design-a {
+  width: 8.21vw;
+}
+.custom .design-a {
+  width: 8.21vw;
+}
+```
+
+```css
   /* Output example */
+.design-a {
+  width: 16.42vw;
+}
+.custom .design-a {
   width: 16.42vw;
 }
 ```
+
+***
 
 ```js
 'postcss-design-convert' : {
   multiple: 2,
   units: ['vw', 'rem'],
-  classRule: /\.design-/
+  selector: /\.design-/
 }
 ```
 
 ```css
-.design-a {
   /* Input example */
+.design-a {
   width: 8.21vw;
   height: 8.21rem;
 }
 .custom .design-a {
-  /* Input example */
   width: 8.21vw;
   height: 8.21rem;
 }
 ```
 
 ```css
-.design-a {
   /* Output example */
+.design-a {
   width: 16.42vw;
   height: 16.42rem;
 }
 .custom .design-a {
-  /* Output example */
   width: 16.42vw;
   height: 16.42rem;
+}
+```
+
+***
+
+```js
+'postcss-design-convert' : {
+  multiple: 2,
+  units: ['vw'],
+  selector: /\.design-/,
+  attribute: /width/
+}
+```
+
+```css
+  /* Input example */
+.design-a {
+  width: 8.21vw;
+  height: 8.21vw;
+}
+.custom .design-a {
+  width: 8.21vw;
+  height: 8.21vw;
+}
+```
+
+```css
+  /* Output example */
+.design-a {
+  width: 16.42vw;
+  height: 8.21vw;
+}
+.custom .design-a {
+  width: 16.42vw;
+  height: 8.21vw;
 }
 ```
 
 ## Usage
 
 ```js
-postcss([ require('postcss-design-convert') ])
+//postcss.config.js
+module.exports = {
+  plugins:[
+    require('postcss-design-convert')({
+      multiple: 2,
+      units: ['vw'],
+      selector: /\.design-/
+    })
+  ]
+}
+
+//.postcssrc.js
+module.exports = {
+  'plugins': {
+    'postcss-design-convert' : {
+      multiple: 2,
+      units: ['vw'],
+      selector: /\.design-/
+    }
+  }
+}
 ```
+
+### Options
+
+1. >__multiple__ _(number)_ __default 2__: how many times the design draft needs to be multiplied
+2. >__units__ _(arrty&lt;string&gt;)_ __default \['vw'\]__: the units to be converted
+3. >__selector__ _(string | Reg)_ __default /./__: used to filter out the style to be converted (version compatibility reasons, alias __\[classRule\]__)
+4. >__attribute__ _(string | Reg)_: used to filter out the attributes to be converted
 
 See [PostCSS] docs for examples for your environment.

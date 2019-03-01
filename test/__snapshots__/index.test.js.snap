@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`.design-a{
+    width: 100rem;
+    height: 10.3rem;
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .custom .design-b{
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .other{
+    width:100vw;
+  }
+  a{
+    width:100vw;
+  } 1`] = `
+".design-a{
+    width: 200rem;
+    height: 20.6rem;
+    width: 200vw;
+    height: 20.6vw;
+  }
+  .custom .design-b{
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .other{
+    width:100vw;
+  }
+  a{
+    width:100vw;
+  }"
+`;
+
+exports[`.design-a{
+    width: 100rem;
+    height: 10.3rem;
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .custom .design-b{
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .other{
+    width:100vw;
+  }
+  a{
+    width:100vw;
+  } 2`] = `
+".design-a{
+    width: 200rem;
+    height: 20.6rem;
+    width: 200vw;
+    height: 20.6vw;
+  }
+  .custom .design-b{
+    width: 200vw;
+    height: 20.6vw;
+  }
+  .other{
+    width:200vw;
+  }
+  a{
+    width:200vw;
+  }"
+`;
+
+exports[`.design-a{
+    width: 100rem;
+    height: 10.3rem;
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .custom .design-b{
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .other{
+    width:100vw;
+  }
+  a{
+    width:100vw;
+  } 3`] = `
+".design-a{
+    width: 100rem;
+    height: 10.3rem;
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .custom .design-b{
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .other{
+    width:100vw;
+  }
+  a{
+    width:200vw;
+  }"
+`;
+
+exports[`.design-a{
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .custom .design-b{
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .other{
+    width:100vw;
+  }
+  a{
+    width:100vw;
+  } 1`] = `
+".design-a{
+    width: 200vw;
+    height: 20.6vw;
+  }
+  .custom .design-b{
+    width: 200vw;
+    height: 20.6vw;
+  }
+  .other{
+    width:100vw;
+  }
+  a{
+    width:100vw;
+  }"
+`;
+
+exports[`.design-a{
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .custom .design-b{
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .other{
+    width:100vw;
+  }
+  a{
+    width:100vw;
+  } 2`] = `
+".design-a{
+    width: 200vw;
+    height: 10.3vw;
+  }
+  .custom .design-b{
+    width: 200vw;
+    height: 10.3vw;
+  }
+  .other{
+    width:100vw;
+  }
+  a{
+    width:100vw;
+  }"
+`;
+
+exports[`.design-a{
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .custom .design-b{
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .other{
+    width:100vw;
+  }
+  a{
+    width:100vw;
+  } 3`] = `
+".design-a{
+    width: 200vw;
+    height: 20.6vw;
+  }
+  .custom .design-b{
+    width: 200vw;
+    height: 20.6vw;
+  }
+  .other{
+    width:100vw;
+  }
+  a{
+    width:100vw;
+  }"
+`;
+
+exports[`.design-a{
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .custom .design-b{
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .other{
+    width:100vw;
+  }
+  a{
+    width:100vw;
+  } 4`] = `
+".design-a{
+    width: 200vw;
+    height: 20.6vw;
+  }
+  .custom .design-b{
+    width: 100vw;
+    height: 10.3vw;
+  }
+  .other{
+    width:100vw;
+  }
+  a{
+    width:100vw;
+  }"
+`;
