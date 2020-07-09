@@ -948,9 +948,9 @@ eslint-plugin-node@^8.0.1:
     semver "^5.5.0"
 
 eslint-plugin-prefer-let@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-prefer-let/-/eslint-plugin-prefer-let-1.0.1.tgz#ef7216bcabf6d4cb0a7b7b5ecf55e85e9ee58067"
-  integrity sha1-73IWvKv21MsKe3tez1XoXp7lgGc=
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prefer-let/-/eslint-plugin-prefer-let-1.0.2.tgz#db5e20252b7805baf4ced0892a35cafb25f3ed67"
+  integrity sha512-nPOl0ZQVtWmG0tI75qtNCJ/N8oHfltqZy0JovBys0amfA6HX24NlU1Q4gzxZz+aWa84QJsDwvgagUnLOneUSFw==
   dependencies:
     requireindex "~1.1.0"
 
